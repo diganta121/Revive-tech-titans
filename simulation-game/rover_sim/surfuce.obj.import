@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddhxkotqoehy5"
+path="res://.godot/imported/surfuce.obj-103b19d2c9027a6ea8523cc083f83070.mesh"
+
+[deps]
+
+files=["res://.godot/imported/surfuce.obj-103b19d2c9027a6ea8523cc083f83070.mesh"]
+
+source_file="res://surfuce.obj"
+dest_files=["res://.godot/imported/surfuce.obj-103b19d2c9027a6ea8523cc083f83070.mesh", "res://.godot/imported/surfuce.obj-103b19d2c9027a6ea8523cc083f83070.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(100, 90, 100)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
