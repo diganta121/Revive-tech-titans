@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://g0ceu33k886g"]
+
+[ext_resource type="Script" path="res://movement_ai.gd" id="1_hrwgb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hkshi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a8cjt"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_hrwgb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hkshi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_a8cjt")
+
+[node name="RayCast" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.238533, 0.971134, 0, -0.971134, -0.238533, 0, 0, 0, 1, 0.696621, -0.0135079, 0)
+target_position = Vector3(0, 12, 0)

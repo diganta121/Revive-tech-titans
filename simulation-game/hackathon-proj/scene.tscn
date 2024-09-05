@@ -1,16 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cin45cl66re2s"]
+[gd_scene load_steps=5 format=3 uid="uid://cin45cl66re2s"]
+
+[ext_resource type="PackedScene" uid="uid://g0ceu33k886g" path="res://charecter.tscn" id="1_eilpt"]
+[ext_resource type="PackedScene" uid="uid://bu5mw0e87gfbd" path="res://BOX.tscn" id="2_5q4o3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1jy23"]
+size = Vector3(200, 1, 200)
 
 [sub_resource type="BoxMesh" id="BoxMesh_18rtr"]
+size = Vector3(200, 1, 200)
 
 [node name="scene" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(200.355, 0, 0, 0, 1, 0, 0, 0, 200.355, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_1jy23")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_18rtr")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.150064, 0.294871, -0.94368, 0.125255, 0.952468, 0.277699, 0.98071, -0.0765282, -0.179865, -177, 64, 0)
+fov = 70.3125
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_eilpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5966, 17.4555, 27.2313)
+
+[node name="StaticBody3D2" parent="." instance=ExtResource("2_5q4o3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.49004, 15.8222, 25.9594)
+
+[node name="StaticBody3D3" parent="." instance=ExtResource("2_5q4o3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.79922, 17.2873, 27.4433)
+
+[node name="StaticBody3D4" parent="." instance=ExtResource("2_5q4o3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5843, 17.2873, 29.4736)
+
+[node name="StaticBody3D5" parent="." instance=ExtResource("2_5q4o3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5843, 17.2873, 24.8488)
+
+[node name="StaticBody3D6" parent="." instance=ExtResource("2_5q4o3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2825, 16.5129, 26.0007)
