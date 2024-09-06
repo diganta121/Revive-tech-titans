@@ -5,6 +5,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_xyc6w"]
 
 [node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(1.01023, 0, 0, 0, 1.01023, 0, 0, 0, 1.01023, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_tlrvr")
