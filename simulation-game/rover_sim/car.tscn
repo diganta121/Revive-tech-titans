@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://br6t8x67324bd"]
 
 [ext_resource type="Script" path="res://vehicle_body_3d.gd" id="1_km22u"]
+[ext_resource type="PackedScene" uid="uid://cgucfdqig5062" path="res://hackathon_model2.glb" id="2_l1dt5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7nhql"]
 albedo_color = Color(0.121569, 0.113725, 0.121569, 1)
@@ -15,9 +16,6 @@ height = 0.5
 [sub_resource type="BoxShape3D" id="BoxShape3D_l5hge"]
 size = Vector3(5, 2.14777, 3)
 
-[sub_resource type="BoxMesh" id="BoxMesh_s8gj5"]
-size = Vector3(5, 2, 3)
-
 [node name="rover" type="Node3D"]
 
 [node name="VehicleBody3D" type="VehicleBody3D" parent="."]
@@ -29,7 +27,7 @@ script = ExtResource("1_km22u")
 ENGINE_POWER = 50
 
 [node name="VehicleWheel3D4" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, -0.274644, -1.91445, -2.2985)
+transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 1.82895, -1.91445, -4.68601)
 engine_force = 50.0
 brake = 5.17
 use_as_traction = true
@@ -49,17 +47,13 @@ shape = SubResource("CylinderShape3D_j1gub")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69616, -0.395631, 0)
 shape = SubResource("BoxShape3D_l5hge")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="VehicleBody3D/CollisionShape3D"]
-mesh = SubResource("BoxMesh_s8gj5")
-skeleton = NodePath("../..")
-
 [node name="Camera3D" type="Camera3D" parent="VehicleBody3D"]
 transform = Transform3D(-0.0645467, 0.235414, -0.969749, 0.0156346, 0.971895, 0.234894, 0.997792, 8.40047e-09, -0.0664132, -22.5475, 8.5229, 0)
 
 [node name="VehicleWheel3D5" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, -0.274644, -1.91445, 2.3859)
+transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 0.27815, -1.597, 3.57903)
 engine_force = 50.0
-brake = 5.17
+brake = 1.0
 use_as_traction = true
 wheel_radius = 0.7
 
@@ -74,7 +68,7 @@ transform = Transform3D(-4.37114e-08, -1, -4.37113e-08, 1, -4.37114e-08, 4.37113
 shape = SubResource("CylinderShape3D_j1gub")
 
 [node name="VehicleWheel3D6" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 5.18289, -1.91445, -2.2985)
+transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 4.69183, -1.71201, -4.563)
 engine_force = 50.0
 brake = 5.17
 use_as_traction = true
@@ -92,7 +86,7 @@ transform = Transform3D(-4.37114e-08, -1, -4.37113e-08, 1, -4.37114e-08, 4.37113
 shape = SubResource("CylinderShape3D_j1gub")
 
 [node name="VehicleWheel3D7" type="VehicleWheel3D" parent="VehicleBody3D"]
-transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 5.18289, -1.91445, 2.3859)
+transform = Transform3D(-4.39737e-08, 0, 1, 0, 1, 0, -1.006, 0, -4.37114e-08, 3.57116, -1.6394, 3.5626)
 engine_force = 50.0
 brake = 5.17
 use_as_traction = true
@@ -108,3 +102,6 @@ mesh = SubResource("CylinderMesh_ymnn7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleBody3D/VehicleWheel3D7/RigidBody3D"]
 transform = Transform3D(-4.37114e-08, -1, -4.37113e-08, 1, -4.37114e-08, 4.37113e-08, -4.37113e-08, -4.37113e-08, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_j1gub")
+
+[node name="hackathon_model2" parent="VehicleBody3D" instance=ExtResource("2_l1dt5")]
+transform = Transform3D(-0.00798893, 0, -0.509772, 0, 0.626275, 0, 0.489509, 0, -0.00831963, 2.64393, 0.678254, -0.385052)
