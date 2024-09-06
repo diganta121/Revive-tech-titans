@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cey1u5kasxd27"
+path="res://.godot/imported/hackathon_model.obj.obj-6661aa98382c4d9a63598020e97d03eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hackathon_model.obj.obj-6661aa98382c4d9a63598020e97d03eb.mesh"]
+
+source_file="res://hackathon_model.obj.obj"
+dest_files=["res://.godot/imported/hackathon_model.obj.obj-6661aa98382c4d9a63598020e97d03eb.mesh", "res://.godot/imported/hackathon_model.obj.obj-6661aa98382c4d9a63598020e97d03eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
